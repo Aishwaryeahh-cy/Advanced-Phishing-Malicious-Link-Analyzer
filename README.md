@@ -1,30 +1,52 @@
-# Advanced Phishing & Malicious Link Analyzer
+🛡️ Advanced Phishing & Malicious Link Analyzer
 
-## Overview
-This tool is a lightweight security scanner designed to detect common phishing and malware indicators in URLs and filenames. It uses heuristic analysis and regex patterns to assign a risk score, helping users decide whether a link or file is safe to interact with.
+A lightweight cybersecurity tool that helps users identify potentially phishing or malicious links and filenames *before clicking them*.
 
-## Why Phishing Is Dangerous
-Phishing is a method where attackers trick you into revealing sensitive info (passwords, credit cards) by pretending to be a trusted entity. Malicious links can also lead to malware downloads that infect your system.
+This project uses heuristic-based analysis to detect common phishing and malware patterns and presents the results through an interactive dashboard.
 
-## Features
-- **URL Static Analysis**: Checks for suspicious keywords, TLDs, and IP-based links.
-- **File Analysis**: Detects dangerous extensions and "double-extension" tricks.
-- **Threat Scoring**: Provides a 0-100 score with LOW, MEDIUM, or HIGH risk ratings.
-- **Scan History**: Keeps track of your recent scans in a session-based table.
+---
 
-## Tech Stack
-- **Language**: Python 3.x
-- **UI Framework**: Streamlit
-- **Data Handling**: Pandas
-- **Logic**: Regular Expressions (re)
+## 🔍 What This Tool Does
 
-## How to Run
-1. Install dependencies:
+- Scans URLs for phishing indicators like:
+  - URL shorteners
+  - Suspicious keywords (login, verify, secure, etc.)
+  - IP-based URLs and unusual domain structures
+- Analyzes filenames for malware patterns such as:
+  - Dangerous extensions (.exe, .js, .scr, etc.)
+  - Double extensions (example: invoice.pdf.exe)
+- Assigns a **risk score (0–100)** and classifies it as:
+  - 🟢 LOW
+  - 🟡 MEDIUM
+  - 🔴 HIGH
+- Clearly explains *why* a link or file was flagged
+- Maintains a session-based scan history
+
+⚠️ This is a **demo and learning project**, not a replacement for enterprise security tools.
+
+---
+
+## 🧠 Why Phishing Detection Matters
+
+Phishing is one of the most common attack vectors used to steal credentials, spread malware, and compromise systems.  
+Many attacks rely on deceptive URLs and filenames that look legitimate at first glance.
+
+This project demonstrates how basic detection logic can significantly improve user awareness.
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- Streamlit
+- Regular Expressions (Regex)
+- Heuristic Scoring Logic
+
+---
+
+## ▶️ How to Run
+
+1. Clone the repository
    ```bash
-   pip install -r requirements.txt
-   ```
-2. Launch the application:
-   ```bash
-   streamlit run app.py
-   ```
-3. Open your browser to the local URL provided by Streamlit.
+   git clone https://github.com/Aishwaryeahh-cy/Advanced-Phishing-Malicious-Link-Analyzer.git
+   cd Advanced-Phishing-Malicious-Link-Analyzer
